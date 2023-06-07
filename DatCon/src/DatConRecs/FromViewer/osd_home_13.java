@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -53,7 +53,7 @@ try {
  printCsvValue(fixed_altitedue, osd_homeIntSig, "fixed_altitedue",lineT, valid);
  printCsvValue(course_lock_torsion, osd_homeIntSig, "course_lock_torsion",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

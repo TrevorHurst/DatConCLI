@@ -19,12 +19,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package src.DatConRecs;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import src.Files.ConvertDat;
-import src.Files.DatConLog;
 import src.Files.ConvertDat.lineType;
+
 
 public class Record_ModuleName_65532 extends Record {
 
@@ -48,7 +45,7 @@ public class Record_ModuleName_65532 extends Record {
         try {
 
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -41,7 +41,7 @@ try {
  printCsvValue(start_fan, imu_data_statusIntSig, "start_fan",lineT, valid);
  printCsvValue(led_status, imu_data_statusIntSig, "led_status",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

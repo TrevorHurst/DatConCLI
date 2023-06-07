@@ -3,7 +3,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 
 public class fly_log_32768 extends Record {
     String text = "";
@@ -26,7 +26,7 @@ public class fly_log_32768 extends Record {
         try {
 
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

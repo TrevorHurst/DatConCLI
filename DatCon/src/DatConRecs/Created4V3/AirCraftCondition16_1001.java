@@ -4,7 +4,6 @@ import src.DatConRecs.AirCraftCondition;
 import src.DatConRecs.Payload;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 
 public class AirCraftCondition16_1001 extends AirCraftCondition {
 
@@ -45,7 +44,6 @@ public class AirCraftCondition16_1001 extends AirCraftCondition {
             printCsvValue(UP_TF_t, aircraft_conditionFloatSig, "UP_TF_t", lineT,
                     valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 

@@ -3,7 +3,7 @@ package src.DatConRecs.FromOtherV3Dats;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -42,7 +42,7 @@ public class ns_data_component_10086 extends Record {
             printCsvValue(ns_cmpnt, ns_data_componentIntSig, "ns_cmpnt", lineT,
                     valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

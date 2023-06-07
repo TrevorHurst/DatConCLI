@@ -4,7 +4,6 @@ package src.DatConRecs.Created4V3;
 import src.DatConRecs.GpsGroup;
 import src.DatConRecs.Payload;
 import src.Files.ConvertDat;
-import src.Files.RecSpec;
 
 public class GPS_2097 extends GpsGroup {
 

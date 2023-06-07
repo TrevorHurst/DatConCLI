@@ -19,11 +19,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 package src.DatConRecs.Created4V3;
 
 import src.DatConRecs.Payload;
-import src.DatConRecs.RecBatt;
-import src.Files.AxesAndSigs;
 import src.Files.ConvertDat;
-import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 
 public class RecBatt38_5002 extends RecBatt38_500X {
 

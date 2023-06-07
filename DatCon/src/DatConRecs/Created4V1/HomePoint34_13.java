@@ -5,7 +5,6 @@ import src.DatConRecs.Record;
 import src.Files.AxesAndSigs;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 
 public class HomePoint34_13 extends Record {
 
@@ -56,7 +55,6 @@ public class HomePoint34_13 extends Record {
             printCsvValue(rthHeight, AxesAndSigs.rthHeightSig, "", lineT,
                     valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 }

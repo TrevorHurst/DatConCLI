@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -77,7 +77,7 @@ try {
  printCsvValue(gear_app_cmd, gear_debug_infoIntSig, "gear_app_cmd",lineT, valid);
  printCsvValue(gear_rc_raw_input, gear_debug_infoIntSig, "gear_rc_raw_input",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

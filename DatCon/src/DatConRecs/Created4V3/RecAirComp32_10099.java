@@ -21,7 +21,7 @@ package src.DatConRecs.Created4V3;
 import src.DatConRecs.Payload;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 
 public class RecAirComp32_10099 extends RecAirComp {
 
@@ -72,7 +72,7 @@ public class RecAirComp32_10099 extends RecAirComp {
             printCsvValue(vgy, vgSig, "Y", lineT, valid);
             printCsvValue(velLevel, velLevelSig, "", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 }

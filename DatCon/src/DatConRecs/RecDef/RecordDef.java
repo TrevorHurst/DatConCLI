@@ -5,7 +5,7 @@ import java.util.Vector;
 import src.DatConRecs.Payload;
 import src.DatConRecs.Record;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.RecSpec;
 import src.Files.Signal;
 import src.Files.Units;
@@ -117,7 +117,7 @@ public class RecordDef extends Record {
             }
         } catch (Exception e) {
             RecordException(e);
-            //DatConLog.Exception(e);
+
         }
     }
 
@@ -167,7 +167,7 @@ public class RecordDef extends Record {
                 }
             }
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

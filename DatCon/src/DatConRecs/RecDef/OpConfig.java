@@ -10,7 +10,6 @@ import java.util.HashSet;
 import java.util.Vector;
 
 import src.DatConRecs.RecDef.Field.FieldType;
-import src.Files.DatConLog;
 import src.Files.Persist;
 import src.Files.RecSpec;
 
@@ -245,7 +244,6 @@ public class OpConfig {
                 System.out.println("ParseError " + pe);
                 pe.printStackTrace();
             } else {
-                DatConLog.Exception(pe, "ParseError " + pe);
             }
         }
     }

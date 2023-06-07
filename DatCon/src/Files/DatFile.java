@@ -18,7 +18,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 package src.Files;
 
-import java.awt.Color;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -131,15 +130,12 @@ public class DatFile {
             throws NotDatFile, IOException {
         byte arra[] = new byte[256];
         //if (true )return (new DatFileV3(datFileName));
-        DatConLog.Log(" ");
-        DatConLog.Log("createDatFile " + datFileName);
         FileInputStream bfr = new FileInputStream(new File(datFileName));
         bfr.read(arra, 0, 256);
         bfr.close();
         String headerString = new String(arra, 0, 21);
         if (!(headerString.substring(16, 21).equals("BUILD"))) {
             if (Persist.invalidStructOK) {
-                DatConLog.Log("createDatFile invalid header - proceeding");
                 datFile = new DatFileV3(datFileName);
                 datFile.setStartOfRecords(256);
                 return datFile;
@@ -179,42 +175,18 @@ public class DatFile {
             if (Persist.autoTransDJIAFiles) {
                 int lastSlash = datFileName.lastIndexOf("\\");
                 String tempDirName = datFileName.substring(0, lastSlash + 1);
-                Color bgColor = datCon.goButton.getBackground();
-                Color fgColor = datCon.goButton.getForeground();
-                boolean enabled = datCon.goButton.isEnabled();
-                String text = datCon.goButton.getText();
-                datCon.goButton.setBackground(Color.BLUE);
-                datCon.goButton.setForeground(Color.WHITE);
-                datCon.goButton.setEnabled(false);
-                datCon.goButton.setText("Extracting .DAT");
                 try {
-                    DatConLog.Log("DJIAssistantFile.extractFirst(" + datFileName
-                            + ", " + tempDirName + ")");
                     DJIAssistantFile.ExtractResult result = DJIAssistantFile
                             .extractFirst(datFileName, tempDirName);
                     if (result.moreThanOne()) {
                         //                    if (true) {
-                        DatConLog.Log(
-                                "DJIAssistantFile.extractFirst:moreThanOne");
-                        boolean moreThanOnePopup = DatConPopups
-                                .moreThanOne(DatCon.frame);
-                        if (moreThanOnePopup) {
-                            return new DatFileV3(result.getFile());
-                        } else {
-                            return null;
-                        }
+
+                        return new DatFileV3(result.getFile());
                     } else if (result.none()) {
-                        DatConLog.Log("DJIAssistantFile.extractFirst:none");
-                        DatConPopups.none(DatCon.frame);
-                        return null;
+
                     }
-                    DatConLog.Log("DJIAssistantFile.extractFirst:one");
-                    return new DatFileV3(result.getFile());
+
                 } finally {
-                    datCon.goButton.setBackground(bgColor);
-                    datCon.goButton.setForeground(fgColor);
-                    datCon.goButton.setEnabled(enabled);
-                    datCon.goButton.setText(text);
                 }
             }
         }
@@ -460,11 +432,9 @@ public class DatFile {
             break;
         case UNKNOWN:
             numBattCells = 4;
-            DatConLog.Log("Assuming 4 cellls per battery");
             break;
         default:
             numBattCells = 4;
-            DatConLog.Log("Assuming 4 cellls per battery");
             break;
         }
     }
@@ -502,8 +472,6 @@ public class DatFile {
     public void printTypes() {
         Iterator<RecSpec> iter = recsInDat.values().iterator();
         while (iter.hasNext()) {
-            RecSpec tst = iter.next();
-            DatConLog.Log(tst.getDescription() + " Type " + tst.getId());
         }
     }
 

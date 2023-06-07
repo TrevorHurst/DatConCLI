@@ -23,7 +23,6 @@ import src.DatConRecs.RecIMU;
 import src.Files.AxesAndSigs;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 import src.Files.Persist;
 import src.Files.Signal;
 import src.Files.Units;
@@ -369,7 +368,6 @@ public class Motor extends Record {
                         lineT, valid);
             }
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 
@@ -634,7 +632,6 @@ public class Motor extends Record {
                         motorWattsPerVelDSig, "All", lineT,
                         (valid && (VelD != 0.0)));
             } catch (Exception e) {
-                DatConLog.Exception(e);
             }
         }
     }

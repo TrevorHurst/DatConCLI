@@ -3,7 +3,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -60,7 +60,7 @@ public class ofdm_cnt_1999 extends Record {
             printCsvValue(v0_error, ofdm_cntIntSig, "v0_error", lineT, valid);
             printCsvValue(seccuss, ofdm_cntIntSig, "seccuss", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

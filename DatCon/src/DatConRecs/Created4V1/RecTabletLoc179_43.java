@@ -4,7 +4,6 @@ import src.DatConRecs.Payload;
 import src.DatConRecs.Record;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -55,7 +54,6 @@ public class RecTabletLoc179_43 extends Record {
             printCsvValue(latitudeTablet, tabletGPSSig, "Latitude", lineT,
                     valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 }

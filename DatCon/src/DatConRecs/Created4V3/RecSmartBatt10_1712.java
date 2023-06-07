@@ -22,7 +22,7 @@ import src.DatConRecs.Payload;
 import src.DatConRecs.Record;
 import src.Files.AxesAndSigs;
 import src.Files.ConvertDat;
-import src.Files.DatConLog;
+
 import src.Files.ConvertDat.lineType;
 
 public class RecSmartBatt10_1712 extends Record {
@@ -72,7 +72,7 @@ public class RecSmartBatt10_1712 extends Record {
                     valid);
             printCsvValue(landTime, AxesAndSigs.battLandTime, "", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 }

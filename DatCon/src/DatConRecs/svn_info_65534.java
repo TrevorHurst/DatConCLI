@@ -4,7 +4,7 @@ import java.nio.ByteBuffer;
 
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 
 public class svn_info_65534 extends Record {
 
@@ -35,7 +35,7 @@ public class svn_info_65534 extends Record {
     public void printCols(lineType lineT) {
         try {
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

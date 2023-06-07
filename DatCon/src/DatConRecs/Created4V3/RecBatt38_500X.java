@@ -22,7 +22,7 @@ import src.DatConRecs.Payload;
 import src.DatConRecs.RecBatt;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 
 // 50 HZ
 //length 47
@@ -115,7 +115,7 @@ public class RecBatt38_500X extends RecBatt {
             printCsvValue(status4, statusSig, "status4", lineT, true);
 
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

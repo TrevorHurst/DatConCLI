@@ -2,7 +2,6 @@ package src.DatConRecs.Created4V3;
 
 import java.util.Vector;
 
-import src.DatConRecs.RecIMU;
 import src.Files.RecClassSpec;
 
 public class Dictionary extends src.DatConRecs.Dictionary {

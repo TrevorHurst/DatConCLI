@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -125,7 +125,7 @@ try {
  printCsvValue(directx_2, airport_limit_dataFloatSig, "directx_2",lineT, valid);
  printCsvValue(directy_2, airport_limit_dataFloatSig, "directy_2",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

@@ -3,7 +3,7 @@ package src.DatConRecs.FromOtherV3Dats;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -123,7 +123,7 @@ public class serial_api_inputs_1002 extends Record {
             printCsvValue(f_test, serial_api_inputsIntSig, "f_test", lineT,
                     valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

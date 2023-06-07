@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -59,7 +59,7 @@ try {
  printCsvValue(CMD_GO_HOME, rc_replayIntSig, "CMD_GO_HOME",lineT, valid);
  printCsvValue(CMD_D4, rc_replayIntSig, "CMD_D4",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

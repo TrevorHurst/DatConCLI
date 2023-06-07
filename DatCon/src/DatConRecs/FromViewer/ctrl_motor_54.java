@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -92,7 +92,7 @@ try {
  printCsvValue(pwm_7, ctrl_motorIntSig, "pwm_7",lineT, valid);
  printCsvValue(pwm_8, ctrl_motorIntSig, "pwm_8",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

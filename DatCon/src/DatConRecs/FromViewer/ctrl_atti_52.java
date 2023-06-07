@@ -3,7 +3,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -423,7 +423,7 @@ public class ctrl_atti_52 extends Record {
             printCsvValue(horiz_ang_acc_output_z, ctrl_attiIntSig,
                     "horiz_ang_acc_output_z", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

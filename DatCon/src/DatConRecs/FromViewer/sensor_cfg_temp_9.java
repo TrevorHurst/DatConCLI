@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -65,7 +65,7 @@ try {
  printCsvValue(fw, sensor_cfg_tempIntSig, "fw",lineT, valid);
  printCsvValue(fa, sensor_cfg_tempIntSig, "fa",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

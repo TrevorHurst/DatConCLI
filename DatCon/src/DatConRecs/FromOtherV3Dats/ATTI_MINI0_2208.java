@@ -3,7 +3,7 @@ package src.DatConRecs.FromOtherV3Dats;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -78,7 +78,7 @@ public class ATTI_MINI0_2208 extends Record {
             printCsvValue(s_rsv10, ATTI_MINI0IntSig, "s_rsv10", lineT, valid);
             printCsvValue(s_cnt0, ATTI_MINI0IntSig, "s_cnt0", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

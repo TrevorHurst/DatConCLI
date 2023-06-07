@@ -23,7 +23,7 @@ import src.DatConRecs.Payload;
 import src.DatConRecs.Record;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 
 public class RecBattStat19_1711 extends Record {
@@ -93,7 +93,7 @@ public class RecBattStat19_1711 extends Record {
         try {
             printCsvValue(status, batteryStatusSig, "", lineT, true);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 }

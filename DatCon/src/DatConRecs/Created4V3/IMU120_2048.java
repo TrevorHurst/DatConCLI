@@ -5,7 +5,6 @@ import src.DatConRecs.Payload;
 import src.DatConRecs.RecIMU;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -47,7 +46,6 @@ public class IMU120_2048 extends RecIMU {
                     "absoluteHeight", lineT, convertDat.absoluteHeightValid);
 
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 

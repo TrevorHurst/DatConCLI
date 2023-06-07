@@ -23,7 +23,6 @@ public class WorkingDir {
 		// this.log = csvView.log;
 		userHome = System.getProperty("user.home");
 		if (userHome == null || userHome.length() == 0) {
-			DatConLog.Error("Can't find the users home directory");
 		} else {
 			workingDir = makeDir(".DatConDir");
 			tempDir = makeDir(".DatConDir/temp");
@@ -36,15 +35,11 @@ public class WorkingDir {
 			try {
 				boolean result = theDir.mkdir();
 				if (result) {
-					DatConLog.Log("Created working Dir "
-							+ theDir.getAbsolutePath());
+
 				} else {
-					DatConLog.Error("Can't create working Dir "
-							+ theDir.getAbsolutePath());
 					return null;
 				}
 			} catch (SecurityException se) {
-				DatConLog.Exception(se);
 				return null;
 			}
 		}

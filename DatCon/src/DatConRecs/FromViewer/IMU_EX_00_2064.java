@@ -3,7 +3,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -96,7 +96,7 @@ public class IMU_EX_00_2064 extends Record {
             printCsvValue(imu_ex_cnt_00, IMU_EX_00IntSig, "imu_ex_cnt_00",
                     lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

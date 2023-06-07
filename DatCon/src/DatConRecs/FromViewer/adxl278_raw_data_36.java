@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -44,7 +44,7 @@ try {
  printCsvValue(adxl278_ay, adxl278_raw_dataFloatSig, "adxl278_ay",lineT, valid);
  printCsvValue(adxl278_az, adxl278_raw_dataFloatSig, "adxl278_az",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

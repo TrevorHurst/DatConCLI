@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -157,7 +157,7 @@ try {
  printCsvValue(esc4_debug1, escmIntSig, "esc4_debug1",lineT, valid);
  printCsvValue(esc4_debug2, escmIntSig, "esc4_debug2",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

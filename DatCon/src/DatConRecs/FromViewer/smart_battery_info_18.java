@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -155,7 +155,7 @@ try {
  printCsvValue(g_evl_vol, smart_battery_infoFloatSig, "g_evl_vol",lineT, valid);
  printCsvValue(g_delt_I, smart_battery_infoFloatSig, "g_delt_I",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

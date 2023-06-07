@@ -29,7 +29,6 @@ import src.DatConRecs.RecDef.RecordDef;
 import src.Files.AnalyzeDatResults;
 import src.Files.ConvertDat;
 import src.Files.Corrupted;
-import src.Files.DatConLog;
 import src.Files.FileEnd;
 import src.Files.Persist;
 import src.Files.RecSpec;
@@ -63,7 +62,8 @@ public class ConvertDatV3 extends ConvertDat {
             // If there is a .csv being produced go ahead and output
             // the first row containing the column headings
             if (csvWriter != null) {
-                csvWriter.print("Tick#,offsetTime");
+                // ATTENTION
+                csvWriter.print("Intentionally, blank");
                 printCsvLine(lineType.HEADER);
             }
             long lastTickNoPrinted = -sampleSize;
@@ -92,7 +92,6 @@ public class ConvertDatV3 extends ConvertDat {
                                 System.out.println(errMsg);
                                 e.printStackTrace();
                             } else {
-                                DatConLog.Exception(e, errMsg);
                             }
                             throw new RuntimeException(errMsg);
                         }
@@ -103,8 +102,7 @@ public class ConvertDatV3 extends ConvertDat {
                     // then output the .csv line
                     if ((csvWriter != null) && processedPayload
                             && tickNo >= lastTickNoPrinted + sampleSize) {
-                        csvWriter.print(tickNo + ","
-                                + _datFile.timeString(tickNo, timeOffset));
+                        csvWriter.print(",");
                         printCsvLine(lineType.LINE);
                         lastTickNoPrinted = tickNo;
                         processedPayload = true;
@@ -112,19 +110,12 @@ public class ConvertDatV3 extends ConvertDat {
                 }
             }
         } catch (Corrupted e) {
-            DatConLog.Error(".DAT Corrupted");
             //e.printStackTrace();
             //            throw new RuntimeException(".DAT Corrupted");
         } catch (FileEnd e) {
         } catch (Exception e) {
         } finally {
             _datFile.close();
-            DatConLog.Log("CRC Error Ratio "
-                    + _datFile.getErrorRatio(Corrupted.Type.CRC));
-            DatConLog.Log("Other Error Ratio "
-                    + _datFile.getErrorRatio(Corrupted.Type.Other));
-            DatConLog.Log(
-                    "TotalNumRecExceptions = " + Record.totalNumRecExceptions);
         }
         return _datFile.getResults();
     }

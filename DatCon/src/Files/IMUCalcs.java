@@ -6,7 +6,6 @@ import src.DatConRecs.RecIMU;
 import src.Files.ConvertDat.lineType;
 
 public class IMUCalcs {
-    private static boolean debug = true;
 
     private double accelYawDegrees = 0.0;
 
@@ -36,7 +35,6 @@ public class IMUCalcs {
         return velNorth;
     }
 
-    private double accelNorthLast = 0.0;
 
     public double getAccelMod() {
         return accelMod;
@@ -144,33 +142,6 @@ public class IMUCalcs {
         agDLast = agD;
     }
 
-    private double[] rotate(double[] quat, double[] accelBVec) {
-        double[] retv = new double[3];
-        retv[0] = accelBVec[0]
-                * (1.0 - 2.0 * quat[2] * quat[2] - 2.0 * quat[3] * quat[3])
-                + accelBVec[1]
-                        * (2.0 * quat[1] * quat[2] - 2.0 * quat[3] * quat[0])
-                + accelBVec[2]
-                        * (2.0 * quat[1] * quat[3] + 2.0 * quat[2] * quat[0]);
-
-        retv[1] = accelBVec[0]
-                * (2.0 * quat[1] * quat[2] + 2.0 * quat[3] * quat[0])
-                + accelBVec[1] * (1.0 - 2.0 * quat[1] * quat[1]
-                        - 2.0 * quat[3] * quat[3])
-                + accelBVec[2]
-                        * (2.0 * quat[2] * quat[3] - 2.0 * quat[1] * quat[0]);
-        //2*qx*qz - 2*qy*qw
-        retv[2] = accelBVec[0]
-                * (2.0 * quat[1] * quat[3] - 2.0 * quat[2] * quat[0])
-                // 2*qy*qz + 2*qx*qw
-                + accelBVec[1]
-                        * (2.0 * quat[1] * quat[3] + 2.0 * quat[1] * quat[0])
-                //1 - 2*qx2 - 2*qy2
-                + accelBVec[2] * (1.0 - 2.0 * quat[1] * quat[1]
-                        - 2.0 * quat[2] * quat[2]);
-
-        return retv;
-    }
 
     public void computeAccel(float ag_X, float ag_Y, float ag_Z, double dt) {
         agN = ag_X;

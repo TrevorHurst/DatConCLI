@@ -6,7 +6,6 @@ import java.util.Vector;
 
 import src.DatConRecs.Created4V1.RecBatt45_17;
 import src.Files.ConvertDat;
-import src.Files.DatConLog;
 import src.Files.Persist;
 import src.Files.RecClassSpec;
 import src.Files.RecSpec;
@@ -95,7 +94,6 @@ public class Dictionary {
                                 | IllegalArgumentException
                                 | InvocationTargetException
                                 | NoSuchMethodException | SecurityException e) {
-                            DatConLog.Exception(e);
                             if (Persist.EXPERIMENTAL_DEV) {
                                 e.printStackTrace();
                             }
@@ -103,9 +101,6 @@ public class Dictionary {
                         }
                     }
                 } else {
-                    DatConLog.Log("getRecordInst can't use " + recClassSpec
-                            + "/" + recClassSpec.getLength()
-                            + " wrong length RecInDat " + recInDat);
                 }
             }
         }

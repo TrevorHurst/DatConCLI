@@ -18,7 +18,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 package src.Files;
-
 import java.text.DecimalFormat;
 
 public class RollPitchYaw {

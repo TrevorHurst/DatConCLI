@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -44,7 +44,7 @@ try {
  printCsvValue(exec_time1, taska_infoIntSig, "exec_time1",lineT, valid);
  printCsvValue(pending1, taska_infoIntSig, "pending1",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

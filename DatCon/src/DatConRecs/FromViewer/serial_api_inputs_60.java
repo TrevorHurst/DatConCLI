@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -74,7 +74,7 @@ try {
  printCsvValue(user_flight_cmd_req, serial_api_inputsIntSig, "user_flight_cmd_req",lineT, valid);
  printCsvValue(user_flight_cmd_ack, serial_api_inputsIntSig, "user_flight_cmd_ack",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

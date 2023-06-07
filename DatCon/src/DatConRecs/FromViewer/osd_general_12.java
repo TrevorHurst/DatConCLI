@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -107,7 +107,7 @@ try {
  printCsvValue(version_match, osd_generalIntSig, "version_match",lineT, valid);
  printCsvValue(product_type, osd_generalIntSig, "product_type",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

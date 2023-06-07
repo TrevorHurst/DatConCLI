@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -107,7 +107,7 @@ try {
  printCsvValue(gps_signal_levels, ControllerIntSig, "gps_signal_levels",lineT, valid);
  printCsvValue(gps_ctrl_levels, ControllerIntSig, "gps_ctrl_levels",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

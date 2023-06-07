@@ -7,7 +7,7 @@ import java.util.TimeZone;
 
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -149,7 +149,7 @@ public class GpsGroup extends Record {
             printCsvValue(velE, velocitySig, "velE", lineT, valid);
             printCsvValue(velD, velocitySig, "velD", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

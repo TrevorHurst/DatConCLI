@@ -21,7 +21,7 @@ package src.DatConRecs.Created4V3;
 import src.DatConRecs.Payload;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Persist;
 import src.Files.Signal;
 import src.Files.Units;
@@ -84,7 +84,7 @@ public class RecAirComp29_10100 extends RecAirComp {
                 super.printWindComps(lineT);
             }
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 }

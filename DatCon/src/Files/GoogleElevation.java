@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.net.URL;
 
 import javax.swing.SwingWorker;
-import src.GUI.KMLPanel;
 
 public class GoogleElevation extends SwingWorker<Void, Void> {
 
@@ -18,13 +17,10 @@ public class GoogleElevation extends SwingWorker<Void, Void> {
 
     double elevation = 123.0;
 
-    private KMLPanel kmlPanel;
-
     @SuppressWarnings("unused")
     private int timezoneOffset;
 
-    public GoogleElevation(KMLPanel kmlPanel, double lat, double longitude) {
-        this.kmlPanel = kmlPanel;
+    public GoogleElevation(double lat, double longitude) {
         this.latitude = lat;
         this.longitude = longitude;
     }
@@ -59,7 +55,7 @@ public class GoogleElevation extends SwingWorker<Void, Void> {
             timezoneOffset = getTimeZoneOffset(result.toString());
 
         } catch (IOException e) {
-            DatConLog.Exception(e, "Google get elevation choked");
+
         }
         return null;
     }
@@ -89,11 +85,8 @@ public class GoogleElevation extends SwingWorker<Void, Void> {
     protected void done() {
         try {
             super.done();
-            if (!Double.isNaN(elevation)) {
-                kmlPanel.setHPelevation(elevation);
-            }
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 }

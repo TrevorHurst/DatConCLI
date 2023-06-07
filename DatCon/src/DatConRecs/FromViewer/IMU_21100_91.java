@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -56,7 +56,7 @@ try {
  printCsvValue(acc_z_21100, IMU_21100IntSig, "acc_z_21100",lineT, valid);
  printCsvValue(cnt_21100, IMU_21100IntSig, "cnt_21100",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

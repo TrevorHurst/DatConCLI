@@ -4,7 +4,6 @@ import src.DatConRecs.Payload;
 import src.DatConRecs.Record;
 import src.Files.AxesAndSigs;
 import src.Files.ConvertDat;
-import src.Files.DatConLog;
 import src.Files.Signal;
 import src.Files.Units;
 import src.Files.ConvertDat.lineType;
@@ -115,7 +114,6 @@ public class RecSmartBatt77_18 extends Record {
             printCsvValue(voltagePercent, voltagePercentSig, "", lineT,
                     validVP);
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 }

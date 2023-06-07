@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -131,7 +131,7 @@ try {
  printCsvValue(base_ba_z, app_temp_cali_dataFloatSig, "base_ba_z",lineT, valid);
  printCsvValue(base_temp, app_temp_cali_dataFloatSig, "base_temp",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

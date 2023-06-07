@@ -3,7 +3,7 @@ package src.DatConRecs.Created4V3;
 import src.DatConRecs.Payload;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.RecSpec;
 
 public class RecRCStat25_1700 extends RCStatus {
@@ -44,7 +44,7 @@ public class RecRCStat25_1700 extends RCStatus {
             printCsvValue(connected, RCStateSig, "connected", lineT,
                     statusValid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

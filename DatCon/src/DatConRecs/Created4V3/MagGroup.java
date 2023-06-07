@@ -23,7 +23,6 @@ import src.DatConRecs.RecIMU;
 import src.DatConRecs.Record;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 import src.Files.MagYaw;
 import src.Files.Persist;
 import src.Files.Signal;
@@ -94,7 +93,6 @@ public class MagGroup extends Record {
                 }
                 printCsvValue(diff, magYawSig, "Yaw-magYaw", lineT, valid);
             } catch (Exception e) {
-                DatConLog.Exception(e);
             }
         }
     }

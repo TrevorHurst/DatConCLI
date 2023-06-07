@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -44,7 +44,7 @@ try {
  printCsvValue(wp_cur_num, waypoint_debugIntSig, "wp_cur_num",lineT, valid);
  printCsvValue(wp_tgt_vel, waypoint_debugIntSig, "wp_tgt_vel",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

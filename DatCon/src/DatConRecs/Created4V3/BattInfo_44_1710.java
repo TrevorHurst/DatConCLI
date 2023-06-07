@@ -4,7 +4,6 @@ import src.DatConRecs.BattInfo;
 import src.DatConRecs.Payload;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 
 public class BattInfo_44_1710 extends BattInfo {
     protected boolean valid = false;
@@ -91,7 +90,6 @@ public class BattInfo_44_1710 extends BattInfo {
             printCsvValue(out_ctl_f, battery_infoFloatSig, "out_ctl_f", lineT,
                     valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 }

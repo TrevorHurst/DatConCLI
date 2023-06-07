@@ -2,7 +2,7 @@ package src.DatConRecs;
 
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.RecSpec;
 import src.Files.Signal;
 import src.Files.Units;
@@ -405,7 +405,7 @@ public class GoTxt50_12 extends Record {
             printCsvValue(roll, attExpSig, "roll", lineT, valid);
             printCsvValue(yaw, attExpSig, "yaw", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 }

@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -101,7 +101,7 @@ try {
  printCsvValue(current_status, battery_infoIntSig, "current_status",lineT, valid);
  printCsvValue(vol_main, battery_infoIntSig, "vol_main",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

@@ -3,7 +3,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -102,7 +102,7 @@ public class aircraft_condition_monitor_70 extends Record {
             printCsvValue(safe_tilt, aircraft_condition_monitorFloatSig,
                     "safe_tilt", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

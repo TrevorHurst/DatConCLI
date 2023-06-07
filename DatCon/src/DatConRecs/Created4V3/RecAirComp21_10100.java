@@ -4,7 +4,7 @@ package src.DatConRecs.Created4V3;
 import src.DatConRecs.Payload;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 
 public class RecAirComp21_10100 extends RecAirComp {
 
@@ -47,7 +47,7 @@ public class RecAirComp21_10100 extends RecAirComp {
             printCsvValue(velLevel2Time, velLevelTimeSig, "2", lineT, valid);
             printCsvValue(velLevel, velLevelSig, "", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
     //    name        air_compensate_data

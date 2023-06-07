@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -98,7 +98,7 @@ try {
  printCsvValue(pend_cnt_c, uc_monitorIntSig, "pend_cnt_c",lineT, valid);
  printCsvValue(pend_cnt_d, uc_monitorIntSig, "pend_cnt_d",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

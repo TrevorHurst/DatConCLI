@@ -13,7 +13,7 @@ import src.DatConRecs.RecDef.RecordDef;
 import src.Files.AnalyzeDatResults;
 import src.Files.ConvertDat;
 import src.Files.Corrupted;
-import src.Files.DatConLog;
+
 import src.Files.FileEnd;
 import src.Files.NotDatFile;
 import src.Files.Persist;
@@ -325,7 +325,7 @@ public class DatFileV3 extends src.Files.DatFile {
                 if (Persist.EXPERIMENTAL_DEV) {
                     e.printStackTrace();
                 } else {
-                    DatConLog.Exception(e, "Can't create recDefs");
+
                 }
             }
             close();

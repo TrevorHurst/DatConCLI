@@ -4,7 +4,6 @@ import src.DatConRecs.AirCraftCondition;
 import src.DatConRecs.Payload;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 
 public class AirCraftCondition48_1001 extends AirCraftCondition {
 
@@ -106,7 +105,6 @@ public class AirCraftCondition48_1001 extends AirCraftCondition {
             printCsvValue(sat_timer, aircraft_conditionFloatSig, "sat_timer",
                     lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 

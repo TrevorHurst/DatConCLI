@@ -3,7 +3,6 @@ package src.DatConRecs.Created4V3;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -115,7 +114,6 @@ public class BatBox32_500X extends RecBatt {
             printCsvValue(flag, BatBoxIntSig, "flag", lineT, valid);
             //printCsvValue(user_def, BatBoxIntSig, "user_def", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 

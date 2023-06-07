@@ -1,7 +1,7 @@
 package src.DatConRecs;
 
 import src.Files.ConvertDat;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 import src.Files.ConvertDat.lineType;
@@ -129,7 +129,7 @@ public class Record_52720 extends Record {
             printCsvValue(pend_cnt_d, uc_monitorIntSig, "pend_cnt_d", lineT,
                     valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

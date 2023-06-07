@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -74,7 +74,7 @@ try {
  printCsvValue(dyn_ccpm_saturation_value, ctrl_ccpmFloatSig, "dyn_ccpm_saturation_value",lineT, valid);
  printCsvValue(dyn_ccpm_saturation_flag, ctrl_ccpmIntSig, "dyn_ccpm_saturation_flag",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

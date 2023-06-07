@@ -23,9 +23,8 @@ package src.DatConRecs.Created4V3;
 
 import src.DatConRecs.Payload;
 import src.Files.ConvertDat;
-import src.Files.DatConLog;
-import src.Files.Persist;
 import src.Files.ConvertDat.lineType;
+
 
 public class RecRCStat18_1700 extends RCStatus {
 
@@ -61,7 +60,7 @@ public class RecRCStat18_1700 extends RCStatus {
             printCsvValue(connected, RCStateSig, "connected", lineT,
                     statusValid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 }

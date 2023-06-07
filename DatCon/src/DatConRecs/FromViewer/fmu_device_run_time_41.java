@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -83,7 +83,7 @@ try {
  printCsvValue(rc, fmu_device_run_timeIntSig, "rc",lineT, valid);
  printCsvValue(gear, fmu_device_run_timeIntSig, "gear",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

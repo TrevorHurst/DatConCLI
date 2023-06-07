@@ -4,7 +4,6 @@ import src.DatConRecs.BattInfo;
 import src.DatConRecs.Payload;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 
 public class BattInfo_38_1710 extends BattInfo {
     protected boolean valid = false;
@@ -84,7 +83,6 @@ public class BattInfo_38_1710 extends BattInfo {
                     valid);
             printCsvValue(FullCap, batteryCap, "OriginalCap", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 

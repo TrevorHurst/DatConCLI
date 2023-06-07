@@ -20,10 +20,9 @@ package src.DatConRecs.Created4V3;
 
 import src.DatConRecs.Payload;
 import src.DatConRecs.RecBatt;
-import src.Files.AxesAndSigs;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 
 // 50 HZ
 //length 47
@@ -122,7 +121,7 @@ public class RecBatt26_5000 extends RecBatt {
             printCsvValue(status4, statusSig, "status4", lineT, true);
          
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

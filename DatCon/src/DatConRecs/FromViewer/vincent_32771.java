@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -215,7 +215,7 @@ try {
  printCsvValue(vincent_debug_data58, vincentFloatSig, "vincent_debug_data58",lineT, valid);
  printCsvValue(vincent_debug_data59, vincentFloatSig, "vincent_debug_data59",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

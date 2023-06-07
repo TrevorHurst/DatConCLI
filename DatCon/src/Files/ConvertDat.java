@@ -29,10 +29,11 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Vector;
 
-import src.DatConRecs.*;
-import src.Files.DatHeader.AcType;
-import src.apps.DatCon;
+import src.DatConRecs.Dictionary;
+import src.DatConRecs.GoTxt50_12;
+import src.DatConRecs.Record;
 import src.DatConRecs.RecDef.RecordDef;
+import src.Files.DatHeader.AcType;
 
 public class ConvertDat {
 
@@ -112,13 +113,6 @@ public class ConvertDat {
 
     private void printCsvValue(String header, String value, lineType lineT,
             boolean valid) throws IOException {
-        if (lineT == lineType.HEADER) {
-            csvWriter.print("," + header);
-        } else {
-            csvWriter.print(",");
-            if (valid)
-                csvWriter.print("" + value.trim());
-        }
     }
 
     LinkedList<AttrValuePair> attrVaulePairs = new LinkedList<AttrValuePair>();
@@ -210,8 +204,6 @@ public class ConvertDat {
         GoTxt50_12.current = null;
         Vector<Record> rcrds = new Vector<Record>();
         try {
-            int numNoRecParsers = 0;
-            int numCreatedParsers = 0;
             @SuppressWarnings("unchecked")
             HashMap<Integer, RecSpec> recsInDat = (HashMap<Integer, RecSpec>) _datFile
                     .getRecsInDat().clone();
@@ -228,26 +220,11 @@ public class ConvertDat {
                         int recInstLength = recordInst.getLength();
                         if (recInstLength <= recInDat.getLength()) { // recInstLength == -1 means it's a RecType.STRING
                             rcrds.addElement(recordInst);
-                            numCreatedParsers++;
-                            DatConLog.Log("Add RecParser #" + numCreatedParsers
-                                    + " " + recordInst.getClassDescription());
                         } else {
-                            DatConLog.Log(" Wrong length RecParser #"
-                                    + numNoRecParsers + " RecInDat Id/Length ="
-                                    + recInDat.getId() + "/"
-                                    + recInDat.getLength() + " RecInst/length ="
-                                    + recordInst.getName() + "//"
-                                    + recInstLength);
                         }
                     }
-                } else {
-                    numNoRecParsers++;
-                    DatConLog.Log("No RecParser #" + numNoRecParsers + " RecId "
-                            + recInDat + "/" + recInDat.getLength());
                 }
             }
-            DatConLog.Log("Num of created parsers " + numCreatedParsers
-                    + " Num of NoRecParsers " + numNoRecParsers);
             //now sort the records
             Iterator<Integer> iter = Dictionary.defaultOrder.iterator();
             while (iter.hasNext()) {
@@ -272,7 +249,6 @@ public class ConvertDat {
             }
 
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 
@@ -285,30 +261,26 @@ public class ConvertDat {
     }
 
     protected void printCsvLine(lineType lineT) throws Exception {
-        try {
-            for (int i = 0; i < records.size(); i++) {
-                records.get(i).printCols(lineT);
-            }
-            if (lineT == lineType.HEADER) {
-                csvWriter.print(",Attribute|Value");
-                if (printVersion) {
-                    printCsvValue(this.getClass().getSimpleName(), "", lineT,
-                            false);
-                    if (_datFile.isTablet()) {
-                        printCsvValue(DatCon.version + "-Tablet", "", lineT,
-                                false);
-                    } else {
-                        printCsvValue(DatCon.version, "", lineT, false);
-                    }
-                }
-            } else {
-                processAttrValuesPairs();
-            }
-            csvWriter.print("\n");
-        } catch (Exception e) {
-            DatConLog.Exception(e, "ConvertDat error in printCsvLine");
-            throw e;
+
+        for (int i = 0; i < records.size(); i++) {
+            records.get(i).printCols(lineT);
         }
+        if (lineT == lineType.HEADER) {
+            csvWriter.print(",Attribute|Value");
+            if (printVersion) {
+                printCsvValue(this.getClass().getSimpleName(), "", lineT,
+                        false);
+                if (_datFile.isTablet()) {
+                    printCsvValue("" + "-Tablet", "", lineT,
+                            false);
+                } else {
+                    printCsvValue("", "", lineT, false);
+                }
+            }
+        } else {
+            processAttrValuesPairs();
+        }
+        csvWriter.print("\n");
     }
 
     public void processCoords(double longitudeDegrees, double latitudeDegrees,
@@ -424,8 +396,8 @@ public class ConvertDat {
         csvWriter.println("<?xml version=\"1.0\"?>");
         csvWriter.println("<signals>");
         csvWriter.println("<series>");
-        csvWriter.println("<sigName>Tick#</sigName>");
-        csvWriter.println("<colName>Tick#</colName>");
+        csvWriter.println("<sigName>Tickyyy#</sigName>");
+        csvWriter.println("<colName>Tickyyy#</colName>");
         csvWriter.println("<numType>int</numType>");
         csvWriter.println("<experimental>true</experimental>");
         csvWriter.println("</series>");

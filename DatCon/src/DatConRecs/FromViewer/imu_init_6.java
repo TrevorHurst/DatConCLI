@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -83,7 +83,7 @@ try {
  printCsvValue(mag_scale_z, imu_initFloatSig, "mag_scale_z",lineT, valid);
  printCsvValue(init_counter, imu_initIntSig, "init_counter",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

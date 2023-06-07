@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -89,7 +89,7 @@ try {
  printCsvValue(numsv, GPS_GLNSIntSig, "numsv",lineT, valid);
  printCsvValue(gpsstate, GPS_GLNSIntSig, "gpsstate",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

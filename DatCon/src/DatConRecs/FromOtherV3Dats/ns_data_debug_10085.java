@@ -3,7 +3,7 @@ package src.DatConRecs.FromOtherV3Dats;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -118,7 +118,7 @@ public class ns_data_debug_10085 extends Record {
             printCsvValue(d18, ns_data_debugFloatSig, "d18", lineT, valid);
             printCsvValue(d19, ns_data_debugFloatSig, "d19", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

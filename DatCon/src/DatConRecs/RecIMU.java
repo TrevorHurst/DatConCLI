@@ -3,7 +3,7 @@ package src.DatConRecs;
 import src.Files.AxesAndSigs;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.MagYaw;
 import src.Files.IMUCalcs;
 import src.Files.Persist;
@@ -452,7 +452,7 @@ public class RecIMU extends Record {
                 printCsvValue(gb_Z, experimentalSig, "gb_Z", lineT, valid);
             }
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

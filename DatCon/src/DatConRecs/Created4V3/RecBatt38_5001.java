@@ -1,12 +1,7 @@
 
 package src.DatConRecs.Created4V3;
 
-import src.DatConRecs.Payload;
-import src.DatConRecs.RecBatt;
-import src.Files.AxesAndSigs;
 import src.Files.ConvertDat;
-import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 
 public class RecBatt38_5001 extends RecBatt38_500X {
 

@@ -21,7 +21,7 @@ package src.DatConRecs.Created4V3;
 
 import src.DatConRecs.Payload;
 import src.Files.ConvertDat;
-import src.Files.DatConLog;
+
 
 public class RecMotor185_10090 extends Motor {
 
@@ -132,7 +132,7 @@ public class RecMotor185_10090 extends Motor {
             }
 
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

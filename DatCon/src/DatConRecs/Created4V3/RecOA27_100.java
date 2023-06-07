@@ -22,7 +22,7 @@ package src.DatConRecs.Created4V3;
 import src.DatConRecs.Payload;
 import src.DatConRecs.Record;
 import src.Files.ConvertDat;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 import src.Files.ConvertDat.lineType;
@@ -60,7 +60,7 @@ public class RecOA27_100 extends Record {
             printCsvValue(OAfrontDistance, oAFrontDistanceSig, "", lineT,
                     frontDistanceIsValid());
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

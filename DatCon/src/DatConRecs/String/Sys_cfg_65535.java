@@ -6,7 +6,7 @@ import src.DatConRecs.Payload;
 import src.DatConRecs.Record;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 
 public class Sys_cfg_65535 extends Record {
 
@@ -38,7 +38,7 @@ public class Sys_cfg_65535 extends Record {
         try {
 
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

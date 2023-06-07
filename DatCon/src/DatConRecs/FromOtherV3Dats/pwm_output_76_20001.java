@@ -4,7 +4,7 @@ import src.DatConRecs.Payload;
 import src.DatConRecs.Record;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -117,7 +117,7 @@ public class pwm_output_76_20001 extends Record {
 //            printCsvValue(OUT_TEMP_CTRL, pwm_outputIntSig, "OUT_TEMP_CTRL",
 //                    lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

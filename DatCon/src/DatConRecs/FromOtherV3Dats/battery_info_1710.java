@@ -2,7 +2,7 @@ package src.DatConRecs.FromOtherV3Dats;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -80,7 +80,7 @@ try {
  printCsvValue(out_ctl, battery_infoFloatSig, "out_ctl",lineT, valid);
  printCsvValue(out_ctl_f, battery_infoFloatSig, "out_ctl_f",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

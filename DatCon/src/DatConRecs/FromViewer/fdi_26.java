@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -53,7 +53,7 @@ try {
  printCsvValue(gyroy_bias_raw, fdiFloatSig, "gyroy_bias_raw",lineT, valid);
  printCsvValue(gyroz_bias_raw, fdiFloatSig, "gyroz_bias_raw",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

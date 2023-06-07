@@ -3,7 +3,7 @@ package src.DatConRecs.FromOtherV3Dats;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -52,7 +52,7 @@ public class usonic4_16 extends Record {
             //                    valid);
             //            printCsvValue(usonic_cnt, usonicIntSig, "usonic_cnt", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

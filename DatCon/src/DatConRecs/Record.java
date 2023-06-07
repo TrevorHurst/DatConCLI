@@ -10,7 +10,7 @@ import src.Files.Axis;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
 import src.Files.CsvWriter;
-import src.Files.DatConLog;
+
 import src.Files.DatFile;
 import src.Files.Persist;
 import src.Files.RecSpec;
@@ -65,12 +65,29 @@ public abstract class Record extends RecSpec {
         payloadBB = _record.getBB();
     }
 
+    String[] returnMe = {"GPS(0):Date","GPS(0):Time", "GPS(0):Lat", "GPS(0):Long", "GPS(0):heightMSL","Motor:Speed", "eventLog"};
+    //"GPS(0):Date","GPS(0):Time", "GPS(0):Lat", "GPS(0):Long", "GPS(0):heightMSL","Motor:Speed", "eventLog"
+
+
     public void printCols(lineType lineT) {
         throw new RuntimeException("printCols called in Record");
     }
 
     public void printCsvValue(Number value, Signal signal, String suffix,
             lineType lineT, boolean valid) throws IOException {
+        
+        
+        String a;
+        boolean returnable = false;
+        if (suffix.length() != 0) a = signal.getName()+":"+suffix;
+        else a = signal.getName();
+        for (String str: returnMe){
+            if (a.contains(str)) returnable = true;
+        }
+        if (!returnable) return;
+
+
+
         if (lineT == lineType.XML) {
             printXmlSig(signal.getName(), suffix, signal);
             return;
@@ -86,7 +103,8 @@ public abstract class Record extends RecSpec {
                 }
             } else if (lineT == lineType.LINE) {
                 csvWriter.print(",");
-                if (valid)
+                if (value.intValue() == 0) return;
+                if (valid);
                     csvWriter.print("" + value);
             }
         }
@@ -94,12 +112,23 @@ public abstract class Record extends RecSpec {
 
     protected void printCsvValue(String value, Signal signal, String suffix,
             lineType lineT, boolean valid) throws IOException {
+        String a;
+        boolean returnable = false;
+        if (suffix.length() != 0) a = signal.getName()+":"+suffix;
+        else a = signal.getName();
+        for (String str: returnMe){
+            if (a.contains(str)) returnable = true;
+        }
+        if (!returnable) return;
+
+
         if (lineT == lineType.XML) {
             printXmlSig(signal.getName(), suffix, signal);
             return;
         }
         if (Persist.EXPERIMENTAL_FIELDS || !signal.isExperimental()) {
             if (lineT == lineType.HEADER) {
+                
                 csvWriter.print("," + signal.getName());
                 if (suffix != "") {
                     csvWriter.print(":" + suffix);
@@ -109,6 +138,7 @@ public abstract class Record extends RecSpec {
                 }
             } else if (lineT == lineType.LINE) {
                 csvWriter.print(",");
+                if (value == "0") return;
                 if (valid)
                     csvWriter.print("" + value);
             }
@@ -124,7 +154,7 @@ public abstract class Record extends RecSpec {
                 System.out.println(errMsg);
                 e.printStackTrace();
             } else {
-                DatConLog.Exception(e, errMsg);
+
             }
         }
         numRecExceptions++;
@@ -133,12 +163,26 @@ public abstract class Record extends RecSpec {
 
     protected void printCsvValue(float value, String header, lineType lineT,
             boolean valid) throws IOException {
+        String a;
+        boolean returnable = false;
+        a = header;
+        for (String str: returnMe){
+            if (a.contains(str)) returnable = true;
+        }
+        if (!returnable) return;
+
+
+        if (lineT == lineType.HEADER){
+            System.out.println(header);
+        }
+
         if (lineT == lineType.XML)
             return;
         if (lineT == lineType.HEADER) {
             csvWriter.print("," + header);
         } else {
             csvWriter.print(",");
+            if (value == 0.0) return;
             if (valid)
                 csvWriter.print("" + value);
         }
@@ -146,10 +190,19 @@ public abstract class Record extends RecSpec {
 
     protected void printCsvValue(String value, String header, lineType lineT,
             boolean valid) throws IOException {
+        String a;
+        boolean returnable = false;
+        a = header;
+        for (String str: returnMe){
+            if (a.contains(str)) returnable = true;
+        }
+        if (!returnable) return;
+
         if (lineT == lineType.HEADER) {
             csvWriter.print("," + header);
         } else {
             csvWriter.print(",");
+            if (value == "0") return;
             if (valid)
                 csvWriter.print("" + value);
         }

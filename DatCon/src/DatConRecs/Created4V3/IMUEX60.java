@@ -3,7 +3,6 @@ package src.DatConRecs.Created4V3;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -65,7 +64,6 @@ public class IMUEX60 extends IMUEX {
             printCsvValue(rtk_alti, altiSig, "rtk_Alti", lineT, valid);
 
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 

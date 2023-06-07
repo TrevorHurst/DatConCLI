@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -83,7 +83,7 @@ try {
  printCsvValue(out_01, temp_ctl_data_01IntSig, "out_01",lineT, valid);
  printCsvValue(cnt_01, temp_ctl_data_01IntSig, "cnt_01",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

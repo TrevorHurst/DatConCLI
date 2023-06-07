@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -47,7 +47,7 @@ try {
  printCsvValue(dis_to_home_x, go_home_infoFloatSig, "dis_to_home_x",lineT, valid);
  printCsvValue(dis_to_home_y, go_home_infoFloatSig, "dis_to_home_y",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

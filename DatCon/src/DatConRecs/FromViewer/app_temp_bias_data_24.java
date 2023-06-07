@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -59,7 +59,7 @@ try {
  printCsvValue(temp, app_temp_bias_dataFloatSig, "temp",lineT, valid);
  printCsvValue(flag, app_temp_bias_dataIntSig, "flag",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

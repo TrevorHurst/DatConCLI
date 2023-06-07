@@ -22,7 +22,7 @@ package src.DatConRecs.Created4V3;
 // 50 Hz
 import src.DatConRecs.Payload;
 import src.Files.ConvertDat;
-import src.Files.DatConLog;
+
 import src.Files.ConvertDat.lineType;
 
 public class RecRCStat48_1700 extends RCStatus {
@@ -55,7 +55,7 @@ public class RecRCStat48_1700 extends RCStatus {
             printCsvValue(connected, RCStateSig, "connected", lineT,
                     statusValid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
     //    name    rc_debug_info

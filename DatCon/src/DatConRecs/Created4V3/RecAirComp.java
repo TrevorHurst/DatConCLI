@@ -6,7 +6,7 @@ import src.DatConRecs.Record;
 import src.DatConRecs.RecIMU;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -120,7 +120,7 @@ public class RecAirComp extends Record {
             printCsvValue(windMag, windMagSig, "", lineT, valid);
             printCsvValue(windMag2, windMagSig, "2", lineT, valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 }

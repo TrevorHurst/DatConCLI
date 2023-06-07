@@ -133,14 +133,14 @@ public class DJIAssistantFile {
                 }
             }
         } catch (IOException e) {
-            DatConLog.Exception(e);
+
         } finally {
             try {
                 if (bufferedIS != null) {
                     bufferedIS.close();
                 }
             } catch (Exception e) {
-                DatConLog.Exception(e);
+
             }
         }
         return retv;

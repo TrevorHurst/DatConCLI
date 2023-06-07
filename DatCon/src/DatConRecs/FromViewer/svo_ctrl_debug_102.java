@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -107,7 +107,7 @@ try {
  printCsvValue(svo_avoid_debug3_limit_norm, svo_ctrl_debugFloatSig, "svo_avoid_debug3_limit_norm",lineT, valid);
  printCsvValue(svo_avoid_debug3_damping_scale, svo_ctrl_debugFloatSig, "svo_avoid_debug3_damping_scale",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

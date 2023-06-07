@@ -8,7 +8,7 @@ import src.DatConRecs.Payload;
 import src.DatConRecs.Record;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.TSAGeoMag;
 
 public class RecFlyLog_32768 extends Record {
@@ -103,7 +103,7 @@ public class RecFlyLog_32768 extends Record {
             }
             text = "";
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 

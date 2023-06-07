@@ -4,7 +4,6 @@ import src.DatConRecs.GoTxt50_12;
 import src.DatConRecs.Payload;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -46,7 +45,6 @@ public class Record_1 extends src.DatConRecs.RecIMU {
                     "absoluteHeight", lineT, convertDat.absoluteHeightValid);
 
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 }

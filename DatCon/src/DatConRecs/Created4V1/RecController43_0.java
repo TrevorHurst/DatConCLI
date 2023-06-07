@@ -5,7 +5,6 @@ import src.DatConRecs.Payload;
 import src.DatConRecs.Record;
 import src.Files.AxesAndSigs;
 import src.Files.ConvertDat;
-import src.Files.DatConLog;
 import src.Files.ConvertDat.lineType;
 
 public class RecController43_0 extends Record {
@@ -51,7 +50,6 @@ public class RecController43_0 extends Record {
             printCsvValue(throttle, AxesAndSigs.throttleSig, "", lineT,
                     sticksValid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
         }
     }
 }

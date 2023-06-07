@@ -9,7 +9,6 @@ import src.DatConRecs.Record;
 import src.Files.AnalyzeDatResults;
 import src.Files.ConvertDat;
 import src.Files.Corrupted;
-import src.Files.DatConLog;
 import src.Files.FileEnd;
 import src.Files.Persist;
 import src.Files.RecSpec;
@@ -33,7 +32,7 @@ public class ConvertDatV1 extends ConvertDat {
             // If there is a .csv being produced go ahead and output
             // the first row containing the column headings
             if (csvWriter != null) {
-                csvWriter.print("Tick#,offsetTime");
+                csvWriter.print("Intentionally, blank");
                 //printCsvLine(csvWriter, lineType.HEADER);
                 printCsvLine(lineType.HEADER);
             }
@@ -90,10 +89,6 @@ public class ConvertDatV1 extends ConvertDat {
             }
         } finally {
             _datFile.close();
-            DatConLog.Log("CRC Error Ratio "
-                    + _datFile.getErrorRatio(Corrupted.Type.CRC));
-            DatConLog.Log("Other Error Ratio "
-                    + _datFile.getErrorRatio(Corrupted.Type.Other));
         }
         return _datFile.getResults();
     }

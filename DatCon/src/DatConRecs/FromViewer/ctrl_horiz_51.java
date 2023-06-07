@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -209,7 +209,7 @@ try {
  printCsvValue(horiz_acc_output_x, ctrl_horizIntSig, "horiz_acc_output_x",lineT, valid);
  printCsvValue(horiz_acc_output_y, ctrl_horizIntSig, "horiz_acc_output_y",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

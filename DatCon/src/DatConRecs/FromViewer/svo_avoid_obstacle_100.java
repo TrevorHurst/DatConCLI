@@ -2,7 +2,7 @@ package src.DatConRecs.FromViewer;
 import src.DatConRecs.*;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -56,7 +56,7 @@ try {
  printCsvValue(SVO_v_limit, svo_avoid_obstacleIntSig, "SVO_v_limit",lineT, valid);
  printCsvValue(SVO_cnt, svo_avoid_obstacleIntSig, "SVO_cnt",lineT, valid);
  } catch (Exception e) {
-DatConLog.Exception(e);
+
 }
 }
 

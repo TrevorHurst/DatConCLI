@@ -23,7 +23,7 @@ import src.DatConRecs.Record;
 import src.Files.AxesAndSigs;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
+
 import src.Files.Signal;
 import src.Files.Units;
 
@@ -67,7 +67,7 @@ public class RecController extends Record {
             printCsvValue(ctrl_level, ControllerIntSig, "ctrl_level", lineT,
                     valid);
         } catch (Exception e) {
-            DatConLog.Exception(e);
+
         }
     }
 }

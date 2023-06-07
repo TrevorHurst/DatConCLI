@@ -4,7 +4,6 @@ import src.DatConRecs.Payload;
 import src.DatConRecs.Record;
 import src.Files.ConvertDat;
 import src.Files.ConvertDat.lineType;
-import src.Files.DatConLog;
 import src.Files.Persist;
 import src.Files.Signal;
 import src.Files.Units;
@@ -19,11 +18,9 @@ public class MagRawGroup extends Record {
 
     public boolean valid;
 
-    private int index;
 
     public MagRawGroup(ConvertDat convertDat, int id, int length, int index) {
         super(convertDat, id, length);
-        this.index = index;
         magRawSig = Signal.SeriesFloat("Mag" + "(" + index + ")",
                 "Magnetometer", null, Units.aTesla);
     }
@@ -55,7 +52,6 @@ public class MagRawGroup extends Record {
                 //            printCsvValue(magYaw, AxesAndSigs.magYawSig, "(" + index + ")",
                 //                    lineT, valid);
             } catch (Exception e) {
-                DatConLog.Exception(e);
             }
         }
     }
